@@ -25,10 +25,13 @@
     function sendMessage() {
         Ayoba.sendMessage(document.getElementById("inputText").value);
         Ayoba.finish();
+		<body style="background-color:#000000;">
     }
-function sendMessage1() {
-    <body style="background-color:#000000;">  
+	function sendMessage1() {
+    <body style="background-color:#000000;">
+	document.getElementById("center").innerHTML = "TEST";
     }
+	
     function composeMessage() {
         Ayoba.composeMessage(document.getElementById("inputText").value);
         Ayoba.finish();
