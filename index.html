@@ -26,7 +26,9 @@
         Ayoba.sendMessage(document.getElementById("inputText").value);
         Ayoba.finish();
     }
-
+function sendMessage1() {
+     function myFunction() { document.getElementById("demo").innerHTML = "Hello Dear Visitor!"; }   
+    }
     function composeMessage() {
         Ayoba.composeMessage(document.getElementById("inputText").value);
         Ayoba.finish();
@@ -213,11 +215,17 @@
         document.getElementById("inputText").value = responseCode.concat(" - ").concat(filePath)
         document.getElementById("pictureRetrieved").src = filePath
     }
+
+	'var item = document.getElementById("locationInputText");
+	'item.onclick = function() {
+'	function myFunction() { document.getElementById("demo").innerHTML = "Hello Dear Visitor!"; }
+'}
+
 </script>
 
 <body style="background-color:#1565c0;">
 <center>
-    <font color="#ffc107">Example Micro App - Mid Screen</font>
+    <font color="#ffc107">MOBA Moove</font>
 </center>
 <br />
 <div style="text-align:center;">
@@ -242,8 +250,9 @@
 <br />
 <img style="width:72px;" id="pictureRetrieved" />
 <br />
+<p id="demo"></p>
 <div style="text-align:center;">
-    <input type="button" value="Send message" onClick="sendMessage()" />
+    <input type="button" value="Send message" onClick="sendMessage1()" />
 </div>
 <div style="text-align:center;">
     <input type="button" value="Compose message" onClick="composeMessage()" />
