@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form id="frm1" action="/action_page.php">
+Request type: <input type="text" name="requestType" value=""><br>
+Location: <input type="text" name="location" value=""><br><br>
+
+</form>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+var x = document.getElementById("frm1");
+var text = "";
+var i;
+for (i = 0; i < x.length ;i++) {
+text += x.elements[i].value + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+
+</body>
+</html>
