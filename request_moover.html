@@ -1,7 +1,35 @@
 
 <!DOCTYPE html>
 <html>
-<body>
+
+<body style= "background-color: lightblue;">
+<header>
+<title> Request moover </title>
+
+</header>
+<h1 style="text-align:center;"><b><big>Request Moover<b><big></h1></br></br>
+
+<form id="frm1" action="/action_page.php">
+  Request type: <select name=mytextarea>
+<option name=one value=Hospital_transport(Emergency)> Hospital transport(Emergency) </option>
+<option name=two value=Hospital_transport(Non-Emergency)> Hospital transport(Non-Emergency) </option>
+<option name=three value=Pharmacy_pickup> Pharmacy pickup </option>
+</select></br></br>
+  Location: <input type="text" name="location" value=" "></br></br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+
+ 
+
+<button onclick="myFunction()">Try it</button>
+
+ 
+<p id="demo"></p>
+
+
+
 
 
 <script>
@@ -9,8 +37,17 @@ function change_page(){
   window.location.href = "rider_chat.html";
 } 
 
+function myFunction() {
+  var x = document.getElementById("frm1");
+  var text = "";
+  var i;
+  for (i = 0; i < x.length ;i++) {
+    text += x.elements[i].value + "<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
 
 </script>
-<input type="button" value="Confirm" onclick="change_page()"/>
+<input type="button" value="Find Moover" onclick="myFunction()"/>
 </body>
 </html>
